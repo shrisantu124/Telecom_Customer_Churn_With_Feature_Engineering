@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telecom Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Sets a clean and modern font */
+            background-color: #f4f4f9; /* Light grey background for soft design */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0073e6; /* A bright blue background for the header */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Some padding around the text */
+            text-align: center; /* Centers the header text */
+            font-size: 24px; /* Larger font size for header */
+        }
+        section {
+            max-width: 600px; /* Limits the width of the form area */
+            margin: 20px auto; /* Centers the section horizontally and adds spacing */
+            padding: 20px;
+            background-color: white; /* White background for the form area */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds subtle shadow around the form */
+        }
+        form {
+            display: flex;
+            flex-direction: column; /* Stacks the input and button vertically */
+        }
+        input[type="file"] {
+            margin-bottom: 20px; /* Adds space below the file input */
+        }
+        button {
+            background-color: #28a745; /* A pleasant green background color for the button */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer; /* Shows a pointer cursor on hover */
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838; /* Darkens the button when hovering */
+        }
+        p {
+            font-size: 16px; /* Sets a readable font size for paragraph text */
+            text-align: center; /* Centers the text */
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 20px;
+        }
+        li {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Telecom Customer Churn
+    </header>
+    <section>
+        <h1>Welcome to the Churn Prediction Tool</h1>
+        <p>Follow the guidelines below to ensure accurate churn predictions:</p>
+        <div class="instructions">
+            <ul>
+                <li><strong>File Format:</strong> Please upload files in .xlsx or .csv format only.</li>
+                <li><strong>Data Format:</strong> Ensure your data conforms to the standard format as outlined in the provided process document.</li>
+                <li><strong>Single File Processing:</strong> Upload and process one file at a time. After predicting, you may upload another file.</li>
+                <li><strong>Accuracy:</strong> For best results, ensure your data is complete and correctly formatted.</li>
+            </ul>
+        </div>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".xlsx, .csv" required>
+            <button type="submit">Upload and Predict</button>
+        </form>
+    </section>
+</body>
+</html>
